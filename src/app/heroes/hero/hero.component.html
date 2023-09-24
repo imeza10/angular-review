@@ -1,0 +1,18 @@
+<p>EL PODEROSO THOOORRR</p>
+<dl>
+    <td>Nombre:</td>
+    <dd>{{ name }}</dd>
+
+    <td>Edad:</td>
+    <dd>{{ age }}</dd>
+
+    <td>Método:</td>
+    <dd>{{ getDescription() }}</dd>
+
+    <td>Capitalizado:</td>
+    <dd>{{ capitalizedName }}</dd>
+</dl>
+
+<button *ngIf="!changeNameSuccess" (click)="changeHero()" class="btn btn-primary">Cambiar nombre</button>
+<button *ngIf="!changeAgeSuccess" (click)="changeAge()" class="btn btn-primary mx-2">Cambiar edad</button>
+<button *ngIf="changeNameSuccess || changeAgeSuccess" (click)="resetForm()" class="btn btn-primary mx-2">Reset</button>
